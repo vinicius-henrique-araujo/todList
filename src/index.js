@@ -27,7 +27,7 @@ function checksExistsUserAccount(request, response, next) {
 
 
 app.post('/users',(request, response) => {
-  // Complete aqui
+ 
   const {name,username} = request.body;
 
   const userExists =  users.find((user)=> user.username === username)
@@ -62,7 +62,6 @@ app.post('/users',(request, response) => {
 });
 
 app.get('/todos', checksExistsUserAccount, (request, response) => {
-  // Complete aqui
   const {user} =  request;
 
 
@@ -70,7 +69,6 @@ app.get('/todos', checksExistsUserAccount, (request, response) => {
 });
 
 app.post('/todos', checksExistsUserAccount, (request, response) => {
-  // Complete aqui
   const {title,deadline} = request.body;
   const {user} = request;
 
